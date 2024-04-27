@@ -1,0 +1,75 @@
+Task 1:
+
+The LRU_Cache class represents a Least Recently Used (LRU) cache, a type of data structure used for caching with a fixed capacity. The primary goal of this cache is to efficiently store and manage a limited number of items while keeping track of their usage. The LRU policy dictates that when the cache reaches its capacity, the least recently used item should be removed to make room for new entries.
+
+An OrderedDict is used to store key-value pairs. The order of insertion is maintained, which is crucial for identifying the least recently used item efficiently.
+
+set:
+- Basically just inserts (when key not in cache) or updates (when key in cache) a key-value pair in the cache while updating the order.
+- If the cache is at capacity, the least recently used item (at the front of the OrderedDict) is removed before inserting the new key-value pair.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Time complexity:
+
+Checking if a key is in the cache (key in self.cache) and removing the least recently used item (self.cache.popitem(last=False)) are both O(1) operations.
+Inserting a new key-value pair (self.cache[key] = value) also takes constant time.
+===================================================================================================================================================================
+get:
+- Basically returns the value of the key (cache hit) and if key not in cache (cache miss) while updating the order of the dictonary. 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Time complexity:
+
+When searching for a key using key in self.cache, the OrderedDict provides O(1) average time complexity for lookups.
+The subsequent pop and re-insertion operations also take constant time because the dictionary size is capped at the cache capacity.
+
+Task 2:
+
+Function Purpose:
+
+find_file searches for all files with a specific suffix beneath a given path.
+Key Steps:
+
+A recursive function, helper, explores files and directories.
+If a file with the desired suffix is found, its path is added to the result.
+If a directory is encountered, it's explored recursively.
+Time Complexity:
+
+O(N), where N is the total number of files and directories in the specified path.
+
+Task 3:
+
+The implementation consists of a HuffmanNode class representing nodes in the Huffman tree, and functions for building the tree, generating Huffman codes, encoding data, and decoding encoded data. The build_huffman_tree function constructs the tree based on the frequency of characters in the input data. Huffman codes are then generated using the generate_huffman_codes function, and the input data is encoded by replacing each character with its corresponding Huffman code. Decoding is performed by traversing the Huffman tree based on the encoded data bits. The implementation has been tested with various test cases, including edge cases such as an empty string and repeated characters.
+
+Time Complexity:
+
+The time complexity of the Huffman Coding implementation is primarily determined by the tree-building step. The build_huffman_tree function has a time complexity of O(n log n), where n is the length of the input data. This complexity arises from constructing the frequency map, sorting nodes, and building the Huffman tree. Other functions, such as generating Huffman codes, encoding, and decoding, have linear time complexities relative to the size of the input data or the number of nodes in the Huffman tree. Overall, the implementation demonstrates the efficiency of Huffman Coding in achieving compression while preserving data integrity.
+
+Task 4:
+
+The is_user_in_group function performs a recursive search for a user within the hierarchical structure of a group. The base case involves checking whether the user is a direct member of the current group, and if so, the function returns True. In the recursive case, the function iterates through each subgroup within the current group, initiating the search process for the user in each subgroup. The function returns True if the user is found in the current group or any of its subgroups, and False if the user is not present in the entire group hierarchy. This approach ensures an efficient and thorough exploration of the group structure to determine the user's membership status.
+
+Time complexity:
+The time complexity of the is_user_in_group function is O(N), where N is the total number of users across all groups in the hierarchy. This is because, in the worst case, the function may need to traverse all users in all groups to find the user or determine its absence. The function iterates through each subgroup and recursively calls itself, making it linear with respect to the number of users and subgroups.
+
+Task 5:
+
+The provided code implements a simple blockchain using a linked list structure in Python. The Block class represents individual blocks in the blockchain, containing a timestamp, data, a cryptographic hash, and a reference to the next block. The Blockchain class manages the blocks in a linked list fashion. It allows adding new blocks to the front of the list, searching for specific data within the blocks, determining the size of the blockchain, and converting the blockchain into a list representation. The implementation utilizes SHA-256 hashing for block integrity and the Greenwich Mean Time for timestamps. This straightforward blockchain design facilitates the addition, retrieval, and manipulation of blocks efficiently.
+
+Time complexity:
+
+Adding a Block (add_block method): O(1) - Constant time complexity as it inserts a new block at the beginning of the linked list.
+Searching for Data (search method): O(n) - Linear time complexity as it iterates through the linked list to find the desired data.
+Getting the Size (size method): O(n) - Linear time complexity as it counts the number of blocks by traversing the linked list.
+Converting to List (to_list method): O(n) - Linear time complexity as it creates a list representation by iterating through the linked list.
+
+Task 6:
+
+Union Function:
+The union function takes two linked lists as input and returns a new linked list that contains the union of elements from both input lists. The union of two sets includes all unique elements present in either set. In the context of linked lists, the function iterates through each list, adding unique elements to the result linked list. The resulting linked list represents the union of elements from the input lists.
+
+Intersection Function:
+The intersection function takes two linked lists as input and returns a new linked list that contains the intersection of elements from both input lists. The intersection of two sets includes only the elements that are common to both sets. In the context of linked lists, the function iterates through each list, identifying and adding common elements to the result linked list. The resulting linked list represents the intersection of elements from the input lists.
+
+Time complexity:
+The time complexity for both the union and intersection functions is O(m + n), where m and n are the sizes of the two linked lists being processed. This is because, in the worst case, we need to iterate through both linked lists once to collect unique elements or find common elements. The set operations (add and intersection) have an average time complexity of O(1), and the iteration through the linked lists contributes linearly to the overall complexity.
+
+

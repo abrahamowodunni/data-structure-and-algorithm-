@@ -1,0 +1,23 @@
+Task0.py
+
+The time complexity for this function is O(1) because it only performs a constant number of operations, regardless of the size of the input lists.
+
+Task1.py
+
+The time complexity of this function is O(n), where n is the total number of elements in both the texts and calls lists. This is because the function iterates through each element in both lists once using the zip() function, and then extends the empty list with the first and second elements of each text and call. The set() function is used to remove duplicates, which has a time complexity of O(n) in the worst case. Finally, the length of the set is calculated, which has a time complexity of O(1). Therefore, the overall time complexity is O(n).
+
+Task2.py
+
+The time complexity of this function is O(n), where n is the number of calls. This is because we iterate through each call in the "calls" list once, performing constant time operations for each call.
+
+Task3.py
+
+The time complexity is O(n log n), where n is the number of callers in Bangalore. The dominant factor is the sorting operation inside the find_unique_codes function. The other operations have linear time complexity (O(n)).
+
+Task4.py
+
+The time complexity is O(n log n), where n is the total number of unique phone numbers involved in both calls and texts. The dominant factor is the sorting operation performed on the list of potential telemarketers before printing. The other operations, such as creating sets and iterating through phone numbers, have linear time complexity (O(n)).
+
+
+
+ 

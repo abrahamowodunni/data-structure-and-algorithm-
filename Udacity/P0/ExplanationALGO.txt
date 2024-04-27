@@ -1,0 +1,75 @@
+algo_task_1:
+==================================================================================================================================================================
+Since we are just returning the floored square root, binary search was used. The binary search gets the mid point and checks if it is exact,lesser or more when the mid number is squared in comparison to the number provided. 
+
+Time complexity:
+binary search is O(log(n))
+
+Space complexity:
+This is an in-place algorithm so space complexity is O(1)
+
+algo_task_2:
+==================================================================================================================================================================
+The rotated_array_search function is designed to find the index of a given number in a rotated sorted array. The function uses a modified binary search algorithm to efficiently locate the target element. 
+
+Time complexity:
+binary search is O(log(n)) while linear search has a time complexity of O(n)
+
+Space complexity:
+This is an in-place algorithm so space complexity is O(1)
+
+algo_task_3:
+==================================================================================================================================================================
+
+The rearrange_digits function takes a list of integers and rearranges them to form two numbers such that their sum is maximum. The logic involves sorting the input list in descending order and then combining the sorted digits alternatively to create two numbers.
+
+Time Complexity:
+The time complexity of the merge sort algorithm is O(n log(n)), where n is the size of the input list.
+The iteration through the sorted list has a linear time complexity, making the overall time complexity dominated by the merge sort.
+
+Space Complexity:
+The space complexity is O(n), where n is the size of the input list. This is due to the space required for the merge sort recursion.
+
+
+algo_task_4:
+==================================================================================================================================================================
+The sort_012 function sorts an array consisting of only 0, 1, and 2 in a single traversal using the Dutch National Flag algorithm. Basically updating the 0s and 2s. 
+
+Time Complexity:
+The time complexity is O(n), where n is the size of the input array. The algorithm processes each element once.
+
+Space Complexity:
+The space complexity is O(1) since the algorithm uses only a constant amount of extra space.
+
+
+algo_task_5:
+==================================================================================================================================================================
+Trie data structure and two classes, TrieNode and Trie, for implementing a Trie. The Trie class is designed to store a dynamic set of strings and includes methods for inserting words into the Trie and finding nodes that represent a given prefix. Additionally, the TrieNode class supports the insertion of child nodes and a method suffixes for collecting suffixes for all complete words below a specific point in the Trie.
+
+Time Complexity:
+The time complexity for inserting a word into the Trie is O(k), where k is the length of the word.
+The time complexity for finding a Trie node based on a prefix is also O(k), where k is the length of the prefix.
+The time complexity for the suffixes method is O(n), where n is the total number of characters in all words below the current TrieNode.
+
+Space Complexity:
+The space complexity is O(n), where n is the total number of characters stored in the Trie. This accounts for the space needed to store the Trie nodes and their children.
+
+
+algo_task_6:
+==================================================================================================================================================================
+The get_min_max function takes a list of unsorted integers and returns a tuple containing the minimum and maximum values from the list
+
+Time Complexity:
+The time complexity of the function is O(n), where n is the size of the input list. The function iterates through the list once.
+
+Space Complexity:
+The space complexity is O(1) since the function uses only a constant amount of extra space to store the min and max variables.
+
+
+algo_task_7:
+==================================================================================================================================================================
+RouteTrieNode, RouteTrie, and Router to implement a simple HTTP router using the Trie data structure
+
+The time complexity for inserting a path into the Trie is O(k), where k is the number of parts in the path.
+The time complexity for finding a handler based on a path is also O(k).
+The space complexity is O(n), where n is the total number of characters stored in the Trie.
